@@ -44,3 +44,6 @@
     ]
   }
 ```
+
+> Source: https://github.com/kosimst/Firicico
+
