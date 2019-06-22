@@ -47,3 +47,17 @@
 
 > Source: https://github.com/kosimst/Firicico
 
+# To make the code brighter
+
+>The reason it was happening is that apple changed their default font rendering process and the Skia graphics library that Chromium based apps use was effected. Apparently it has been fixed and you will just have to wait until the changes trickle down to VSCode.
+
+```shell
+defaults write com.microsoft.VSCode CGFontRenderingFontSmoothingDisabled 0
+defaults write com.microsoft.VSCode.helper CGFontRenderingFontSmoothingDisabled 0
+defaults write com.microsoft.VSCode.helper.EH CGFontRenderingFontSmoothingDisabled 0
+defaults write com.microsoft.VSCode.helper.NP CGFontRenderingFontSmoothingDisabled 0
+defaults write com.microsoft.VSCode AppleFontSmoothing -int 1
+defaults write com.microsoft.VSCode.helper AppleFontSmoothing -int 1
+defaults write com.microsoft.VSCode.helper.EH AppleFontSmoothing -int 1
+defaults write com.microsoft.VSCode.helper.NP AppleFontSmoothing -int 1
+```
